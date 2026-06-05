@@ -1,0 +1,523 @@
+.station-details {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  padding-top: 0;
+}
+
+.breadcrumbs {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem 0.5rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.breadcrumb-link {
+  color: #4CAF50;
+  cursor: pointer;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb-link:hover {
+  color: #45a049;
+}
+
+.breadcrumb-separator {
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+.breadcrumb-current {
+  color: #666;
+  font-weight: 500;
+}
+
+.main-title {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 1rem 2rem;
+}
+
+.main-title h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.search-bar {
+  max-width: 1200px;
+  margin: 0 auto 2rem auto;
+  padding: 0 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.address-input {
+  flex: 1;
+  padding: 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.address-input:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+.search-btn {
+  padding: 1rem 1.5rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-btn:hover {
+  background-color: #45a049;
+}
+
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.station-info-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  border: 1px solid #f0f0f0;
+  position: relative;
+  overflow: hidden;
+}
+
+.station-info-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #4CAF50, #45a049);
+}
+
+.station-header {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.station-name {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #2c3e50;
+  margin: 0 0 0.75rem 0;
+  line-height: 1.2;
+}
+
+.station-type {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #4CAF50;
+  margin-bottom: 0.75rem;
+  display: inline-block;
+  background: rgba(76, 175, 80, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  border: 1px solid rgba(76, 175, 80, 0.2);
+}
+
+.station-location {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.station-location::before {
+  content: '📍';
+  font-size: 1rem;
+}
+
+.station-hours {
+  font-size: 1.1rem;
+  color: #666;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.station-hours::before {
+  content: '🕒';
+  font-size: 1rem;
+}
+
+.details-section {
+  margin: 2rem 0 2.5rem 0;
+}
+
+.details-section-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0 0 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.details-section-title::before {
+  content: '⚡';
+  font-size: 1.2rem;
+}
+
+.details-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+}
+
+.details-item {
+  background: white;
+  border-radius: 10px;
+  padding: 1.25rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0f0f0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.details-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.details-label {
+  display: block;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.details-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2c3e50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.details-item:nth-child(1) .details-value {
+  color: #4CAF50;
+}
+
+.details-item:nth-child(2) .details-value {
+  color: #2196F3;
+}
+
+.details-item:nth-child(3) .details-value {
+  color: #FF9800;
+}
+
+.details-item:nth-child(4) .details-value {
+  color: #9C27B0;
+}
+
+.pricing-section {
+  margin-bottom: 2rem;
+}
+
+.pricing-left {
+  max-width: 400px;
+}
+
+.pricing-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.pricing-label {
+  font-size: 1rem;
+  color: #666;
+}
+
+.pricing-value {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.pricing-divider {
+  height: 1px;
+  background-color: #e5e7eb;
+  margin: 0.5rem 0;
+}
+
+.pricing-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.total-label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.total-value {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.time-selector {
+  margin-bottom: 2rem;
+}
+
+.time-selector label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.time-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.time-btn {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #e5e7eb;
+  background: white;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.time-btn:hover {
+  border-color: #4CAF50;
+  color: #4CAF50;
+}
+
+.time-btn.active {
+  background-color: #4CAF50;
+  border-color: #4CAF50;
+  color: white;
+}
+
+.station-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.feature-icon {
+  font-size: 1.2rem;
+}
+
+.feature-text {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.pay-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.pay-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 1.5rem 4rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.pay-button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+.loading {
+  text-align: center;
+  padding: 4rem;
+  color: #666;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .breadcrumbs {
+    padding: 1rem 1rem 0.5rem 1rem;
+  }
+  
+  .main-title {
+    padding: 0 1rem 1rem 1rem;
+  }
+  
+  .main-title h1 {
+    font-size: 2rem;
+  }
+  
+  .search-bar {
+    padding: 0 1rem;
+    flex-direction: column;
+  }
+  
+  .content-container {
+    padding: 0 1rem;
+  }
+  
+  .station-info-card {
+    padding: 1.5rem;
+  }
+  
+  .details-section {
+    margin: 1.5rem 0 2rem 0;
+  }
+  
+  .details-section-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .details-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .details-item {
+    padding: 1rem;
+  }
+  
+  .details-label {
+    font-size: 0.8rem;
+  }
+  
+  .details-value {
+    font-size: 1rem;
+  }
+
+  .station-name {
+    font-size: 1.5rem;
+  }
+  
+  .time-buttons {
+    justify-content: center;
+  }
+  
+  .station-features {
+    grid-template-columns: 1fr;
+  }
+  
+  .pay-section {
+    padding: 1rem;
+  }
+  
+  .pay-button {
+    padding: 1.2rem 2rem;
+    font-size: 1.1rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-title h1 {
+    font-size: 1.5rem;
+  }
+  
+  .station-info-card {
+    padding: 1rem;
+  }
+
+  .details-section {
+    margin: 1rem 0 1.5rem 0;
+  }
+  
+  .details-section-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .details-list {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 0.75rem;
+  }
+  
+  .details-item {
+    padding: 0.875rem;
+  }
+  
+  .details-label {
+    font-size: 0.75rem;
+  }
+  
+  .details-value {
+    font-size: 0.95rem;
+  }
+  
+  .station-name {
+    font-size: 1.3rem;
+  }
+  
+  .time-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .pay-button {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+  }
+}
